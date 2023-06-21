@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '..\ui\data_tab.ui'
+# Form implementation generated from reading ui file '..\ui\last_tab.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -15,28 +15,19 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(400, 300)
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        Form.setFont(font)
         self.horizontalLayout = QtWidgets.QHBoxLayout(Form)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.widget = QtWidgets.QWidget(Form)
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        self.widget.setFont(font)
         self.widget.setObjectName("widget")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
-        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.widget)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label = QtWidgets.QLabel(self.widget)
         font = QtGui.QFont()
         font.setPointSize(20)
         self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
-        self.verticalLayout.addWidget(self.label)
-        self.pushButton_data_next = QtWidgets.QPushButton(self.widget)
-        self.pushButton_data_next.setObjectName("pushButton_data_next")
-        self.verticalLayout.addWidget(self.pushButton_data_next)
+        self.horizontalLayout_2.addWidget(self.label)
         self.horizontalLayout.addWidget(self.widget)
 
         self.retranslateUi(Form)
@@ -45,8 +36,7 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Data Page"))
-        self.pushButton_data_next.setText(_translate("Form", "Next"))
+        self.label.setText(_translate("Form", "Last Tab"))
 
 
 if __name__ == "__main__":

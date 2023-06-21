@@ -1,14 +1,8 @@
-import os
-
-from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-qt_ui_file = os.path.join(current_dir, "../ui/data_tab.ui")
-Form, Base = uic.loadUiType(qt_ui_file)
+from .ui_data_tab import Ui_Form
+from PyQt5.QtWidgets import QWidget, QApplication
 
 
-class DataTab(Base, Form):
+class DataTab(Ui_Form, QWidget):
     def __init__(self):
         super().__init__()
         self.setupUi(self)

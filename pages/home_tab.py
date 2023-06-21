@@ -1,13 +1,8 @@
-import os
-from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-qt_ui_file = os.path.join(current_dir, "../ui/home_tab.ui")
-Form, Base = uic.loadUiType(qt_ui_file)
+from PyQt5.QtWidgets import QWidget, QApplication
+from .ui_home_tab import Ui_Form
 
 
-class HomeTab(Base, Form):
+class HomeTab(Ui_Form, QWidget):
     def __init__(self):
         super().__init__()
         self.setupUi(self)

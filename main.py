@@ -1,19 +1,12 @@
 import os
 import sys
 
-from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from ui_main import Ui_MainWindow
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-qt_ui_file = os.path.join(current_dir, "ui/main.ui")
-Form, Base = uic.loadUiType(qt_ui_file)
-
 
 class MainWindow(Ui_MainWindow, QMainWindow):
-    """Main App window
-    """
 
     def __init__(self):
         super().__init__()
