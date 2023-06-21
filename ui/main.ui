@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>745</width>
+    <height>549</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="LoginTab" name="tab_login">
+       <attribute name="title">
+        <string>Login</string>
+       </attribute>
+      </widget>
+      <widget class="HomeTab" name="tab_home">
+       <attribute name="title">
+        <string>Home</string>
+       </attribute>
+      </widget>
+      <widget class="DataTab" name="tab_data">
+       <attribute name="title">
+        <string>Data</string>
+       </attribute>
+      </widget>
+      <widget class="LastTab" name="tab_last_page">
+       <attribute name="title">
+        <string>Last Page</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>745</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>HomeTab</class>
+   <extends>QWidget</extends>
+   <header>pages/home_tab</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LoginTab</class>
+   <extends>QWidget</extends>
+   <header>pages/login_tab</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DataTab</class>
+   <extends>QWidget</extends>
+   <header>pages/data_tab</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LastTab</class>
+   <extends>QWidget</extends>
+   <header>pages/last_tab</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
