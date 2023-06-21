@@ -1,6 +1,6 @@
 import os
 from PyQt5 import uic
-from PyQt5.QtWidgets import QWidget, QApplication
+from PyQt5.QtWidgets import QApplication
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 qt_ui_file = os.path.join(current_dir, "../ui/home_tab.ui")
