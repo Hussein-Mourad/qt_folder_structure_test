@@ -16,7 +16,7 @@
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QWidget" name="widget" native="true">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QLabel" name="label">
         <property name="font">
@@ -29,6 +29,16 @@
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_font_path"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_new_window">
+        <property name="text">
+         <string>Open new Window</string>
         </property>
        </widget>
       </item>
