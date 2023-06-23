@@ -3,7 +3,7 @@ import os
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QToolButton, QFileDialog, QLineEdit, QLabel
 
-from pages import global_state
+from pages.settings_data import SettingsData
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 qt_ui_file = os.path.join(current_dir, "../ui/settings.ui")
@@ -18,7 +18,7 @@ class Settings(Base, Form):
         self.lineEdit_font_path: QLineEdit = self.findChild(QLineEdit, "lineEdit_font_path")
         self.toolButton_font_path: QToolButton = self.findChild(QToolButton, "toolButton_font_path")
         self.connect_signals()
-        self.label_font_path_error.setText(global_state.font_file_dir)
+        self.label_font_path_error.setText(SettingsData.font_file_dir)
 
     # noinspection PyUnresolvedReferences
     def connect_signals(self):
@@ -28,7 +28,7 @@ class Settings(Base, Form):
     def font_path_callback(self):
         try:
             folder_path = QFileDialog.getExistingDirectory(self, "Get Font Folder", "")
-            global_state.font_file_dir = folder_path
+            SettingsData.font_file_dir = folder_path
             self.lineEdit_font_path.setText(folder_path)
         except Exception as e:
             print("ERROR: font_path_callback(): ", e)
@@ -38,7 +38,7 @@ class Settings(Base, Form):
             self.label_font_path_error.setText("Path doesn't exists")
         else:
             self.label_font_path_error.setText("")
-        global_state.font_file_dir = text
+        SettingsData.font_file_dir = text
 
 
 if __name__ == '__main__':
