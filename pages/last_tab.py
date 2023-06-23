@@ -6,7 +6,7 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QPushButton, QLineEdit
 
 from pages import global_state
-from pages.settings import Settings
+from pages.settings_window import Settings
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 qt_ui_file = os.path.join(current_dir, "../ui/last_tab.ui")

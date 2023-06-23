@@ -11,7 +11,7 @@ from pages.login_tab import LoginTab
 from pages.home_tab import HomeTab
 from pages.data_tab import DataTab
 from pages.last_tab import LastTab
-from pages.settings import Settings
+from pages.settings_window import Settings
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 qt_ui_file = os.path.join(current_dir, "ui/main.ui")
