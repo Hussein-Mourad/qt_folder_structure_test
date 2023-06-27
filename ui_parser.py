@@ -1,6 +1,5 @@
 import argparse
 import os
-import re
 import xml.etree.ElementTree as ET
 
 
@@ -10,12 +9,6 @@ def config_args():
     parser.add_argument("-f", "--file-path", type=str,
                         help="Path of the ui file")
     return parser
-
-
-def camel_to_snake(name):
-    name = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
-    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', name).lower()
-
 
 if __name__ == "__main__":
     parser = config_args()
@@ -35,7 +28,7 @@ if __name__ == "__main__":
     print()
     for elem in xmlTree.iter():
         if elem.tag == "widget":
-            name = camel_to_snake(elem.get("name"))
+            name = elem.get("name")
             class_name = elem.get("class")
             print(
                 f'self.{name}: {class_name} = self.findChild({class_name}, "{name}")')
